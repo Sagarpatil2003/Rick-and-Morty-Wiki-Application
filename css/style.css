@@ -1,0 +1,95 @@
+/* style.css */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #f9fafb;
+  color: #1f2937;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+}
+main {
+  flex: 1;
+}
+#character-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 24px;
+  margin-bottom: 60px;
+}
+.card {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.2s;
+}
+.card:hover {
+  transform: translateY(-5px);
+}
+.card img {
+  width: 100%;
+  height: 260px;
+  object-fit: cover;
+}
+.card h3 {
+  margin: 10px;
+  font-size: 1.2rem;
+  color: #111827;
+}
+.card p {
+  margin: 0 10px;
+  color: #6b7280;
+  font-size: 0.95rem;
+}
+.card a {
+  margin: 10px;
+  text-decoration: none;
+  background-color: #10b981;
+  color: white;
+  padding: 8px 14px;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  align-self: flex-start;
+  transition: background 0.2s;
+}
+.card a:hover {
+  background-color: #0e9b6c;
+}
+.pagination {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  padding-bottom: 60px;
+}
+.pagination button {
+  padding: 10px 18px;
+  border-radius: 999px;
+  border: 1px solid #d1d5db;
+  background: #fff;
+  cursor: pointer;
+  font-size: 0.95rem;
+}
+.pagination button:hover {
+  background-color: #10b981;
+  color: #fff;
+}
+footer {
+  background: #111827;
+  color: #e5e7eb;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: monospace;
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+}
